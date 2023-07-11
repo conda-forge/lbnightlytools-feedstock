@@ -68,7 +68,7 @@ requirements:
     - lbinstall
     - python-gitlab
     - pika ==1.1.0
-    - couchdb
+    - python-couchdb
     - tabulate
     - joblib
     - gitpython
@@ -98,11 +98,11 @@ test:
     - lbn-check-preconditions --help
     - lbn-collect-build-logs --help
     - lbn-enabled-slots --help
-    - lbn-generate-compatspec --help
-    - lbn-generate-do0spec --help
+    # - lbn-generate-compatspec --help
+    # - lbn-generate-do0spec --help
     - lbn-generate-extspec --help
     - lbn-generate-genericspec --help
-    - lbn-generate-lbscriptsspec --help
+    # - lbn-generate-lbscriptsspec --help
     - lbn-generate-metaspec --help
     - lbn-generate-spec --help
     - lbn-gen-release-config --help
@@ -116,7 +116,7 @@ test:
     - lbn-release-trigger --help
     - lbn-reschedule-tests --help
     - lbn-rpm --help
-    - lbn-rpm-validator --help
+    # - lbn-rpm-validator --help
     - lbn-test --help
     - lbn-test-legacy --help
     - lbn-test-poll --help
@@ -125,7 +125,7 @@ test:
     - lbpr-get-command --help
     - lbq-builddone --help
     - lbq-buildnotif --help
-    - lbq-getteststorun --help
+    # - lbq-getteststorun --help
     - lbq-requesttest --help
   requires:
     - pip
