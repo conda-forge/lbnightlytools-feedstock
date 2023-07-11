@@ -88,7 +88,7 @@ test:
     - LbTools
   commands:
     - pip check
-    - lbn-ansi2html --help
+    - lbn-ansi2html --help  # [linux]
     - lbn-build --help
     - lbn-build-legacy --help
     - lbn-build-log-to-html --help
