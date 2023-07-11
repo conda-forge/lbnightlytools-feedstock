@@ -89,44 +89,44 @@ test:
   commands:
     - pip check
     - lbn-ansi2html --help  # [linux]
-    - lbn-build --help
-    - lbn-build-legacy --help
-    - lbn-build-log-to-html --help
-    - lbn-check-config --help
-    - lbn-checkout --help
-    - lbn-checkout-legacy --help
-    - lbn-check-preconditions --help
-    - lbn-collect-build-logs --help
-    - lbn-enabled-slots --help
-    # - lbn-generate-compatspec --help
-    # - lbn-generate-do0spec --help
-    - lbn-generate-extspec --help
-    - lbn-generate-genericspec --help
-    # - lbn-generate-lbscriptsspec --help
-    - lbn-generate-metaspec --help
-    - lbn-generate-spec --help
-    - lbn-gen-release-config --help
-    - lbn-get-new-refs --help
-    - lbn-gitlab-mr --help
-    - lbn-index --help
-    - lbn-install --help
-    - lbn-list-platforms --help
-    - lbn-preconditions --help
-    - lbn-release-poll --help
-    - lbn-release-trigger --help
-    - lbn-reschedule-tests --help
-    - lbn-rpm --help
-    # - lbn-rpm-validator --help
-    - lbn-test --help
-    - lbn-test-legacy --help
-    - lbn-test-poll --help
-    - lbp-check-periodic-tests --help
-    - lbp-check-periodic-tests-msg --help
-    - lbpr-get-command --help
-    - lbq-builddone --help
-    - lbq-buildnotif --help
-    # - lbq-getteststorun --help
-    - lbq-requesttest --help
+    - lbn-build --help  # [linux]
+    - lbn-build-legacy --help  # [linux]
+    - lbn-build-log-to-html --help  # [linux]
+    - lbn-check-config --help  # [linux]
+    - lbn-checkout --help  # [linux]
+    - lbn-checkout-legacy --help  # [linux]
+    - lbn-check-preconditions --help  # [linux]
+    - lbn-collect-build-logs --help  # [linux]
+    - lbn-enabled-slots --help  # [linux]
+    # - lbn-generate-compatspec --help  # [linux]
+    # - lbn-generate-do0spec --help  # [linux]
+    - lbn-generate-extspec --help  # [linux]
+    - lbn-generate-genericspec --help  # [linux]
+    # - lbn-generate-lbscriptsspec --help  # [linux]
+    - lbn-generate-metaspec --help  # [linux]
+    - lbn-generate-spec --help  # [linux]
+    - lbn-gen-release-config --help  # [linux]
+    - lbn-get-new-refs --help  # [linux]
+    - lbn-gitlab-mr --help  # [linux]
+    - lbn-index --help  # [linux]
+    - lbn-install --help  # [linux]
+    - lbn-list-platforms --help  # [linux]
+    - lbn-preconditions --help  # [linux]
+    - lbn-release-poll --help  # [linux]
+    - lbn-release-trigger --help  # [linux]
+    - lbn-reschedule-tests --help  # [linux]
+    - lbn-rpm --help  # [linux]
+    # - lbn-rpm-validator --help  # [linux]
+    - lbn-test --help  # [linux]
+    - lbn-test-legacy --help  # [linux]
+    - lbn-test-poll --help  # [linux]
+    - lbp-check-periodic-tests --help  # [linux]
+    - lbp-check-periodic-tests-msg --help  # [linux]
+    - lbpr-get-command --help  # [linux]
+    - lbq-builddone --help  # [linux]
+    - lbq-buildnotif --help  # [linux]
+    # - lbq-getteststorun --help  # [linux]
+    - lbq-requesttest --help  # [linux]
   requires:
     - pip
 
