@@ -51,7 +51,7 @@ build:
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
