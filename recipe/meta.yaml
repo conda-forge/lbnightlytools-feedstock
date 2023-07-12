@@ -1,6 +1,5 @@
 {% set name = "lbnightlytools" %}
-{% set version = "3.0.56" %}
-
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,11 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbNightlyTools-{{ version }}.tar.gz
-  sha256: 95bd2dcc9c04041557d8a8715c8be79f0bf7af2f8b68afce8283b0703e3a3418
+  sha256: 51d4be08768a41ca7b63e80b9b3b78dbd986bc2dda31adb686ce3754ab706922
 
 build:
-  number: 0
-  noarch: python
   entry_points:
     - lbn-ansi2html=LbNightlyTools.Scripts._entry_points:ansi2html
     - lbn-build=LbNightlyTools.Scripts.Build:run
@@ -43,7 +40,6 @@ build:
     - lbn-reschedule-tests=LbNightlyTools.Scripts._entry_points:reschedule_tests
     - lbn-rpm=LbNightlyTools.Scripts._entry_points:rpm
     - lbn-rpm-validator=LbNightlyTools.Scripts._entry_points:rpm_validator
-    - lbn-slots-by-deployment=LbNightlyTools.Scripts._entry_points:slots_by_deployment
     - lbn-test=LbNightlyTools.Scripts.Test:run
     - lbn-test-legacy=LbNightlyTools.Scripts.Test:run
     - lbn-test-poll=LbNightlyTools.Scripts._entry_points:test_poll
@@ -55,39 +51,82 @@ build:
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
-    - nose >=1.0
+    - python
+    - setuptools >=42,<58
+    - wheel
+    - setuptools-scm >=3.4
     - pip
-    - python =2.7|>=3.6
-    - setuptools_scm
-    - setuptools <58.0
   run:
-    - python-couchdb
-    - decorator
-    - gitdb2
-    - gitpython
-    - joblib
+    - python
+    - lbenv
     - lbcommon >=0.0.7
     - lbdevtools
-    - lbenv
-    - lbsoftconfdb2clients
-    - networkx
-    - pika ==1.1.0
-    - python =2.7|>=3.6
-    - python-gitlab
-    - pyyaml
-    - tabulate
-    - xrootd
     - lbinstall
+    - python-gitlab
+    - pika ==1.1.0
+    - python-couchdb
+    - tabulate
+    - joblib
+    - gitpython
+    - networkx
+    - gitdb2
+    - pyyaml
+    - decorator
+    - future
 
 test:
   imports:
     - LbMsg
     - LbNightlyTools
+    - LbPR
+    - LbPeriodicTools
+    - LbRPMTools
+    - LbTools
   commands:
     - pip check
+    - lbn-ansi2html --help  # [linux]
+    - lbn-build --help  # [linux]
+    - lbn-build-legacy --help  # [linux]
+    - lbn-build-log-to-html --help  # [linux]
+    - lbn-check-config --help  # [linux]
+    - lbn-checkout --help  # [linux]
+    - lbn-checkout-legacy --help  # [linux]
+    - lbn-check-preconditions --help  # [linux]
+    - lbn-collect-build-logs --help  # [linux]
+    - lbn-enabled-slots --help  # [linux]
+    # - lbn-generate-compatspec --help  # [linux]
+    # - lbn-generate-do0spec --help  # [linux]
+    - lbn-generate-extspec --help  # [linux]
+    - lbn-generate-genericspec --help  # [linux]
+    # - lbn-generate-lbscriptsspec --help  # [linux]
+    - lbn-generate-metaspec --help  # [linux]
+    - lbn-generate-spec --help  # [linux]
+    - lbn-gen-release-config --help  # [linux]
+    - lbn-get-new-refs --help  # [linux]
+    - lbn-gitlab-mr --help  # [linux]
+    - lbn-index --help  # [linux]
+    - lbn-install --help  # [linux]
+    - lbn-list-platforms --help  # [linux]
+    - lbn-preconditions --help  # [linux]
+    - lbn-release-poll --help  # [linux]
+    - lbn-release-trigger --help  # [linux]
+    - lbn-reschedule-tests --help  # [linux]
+    - lbn-rpm --help  # [linux]
+    # - lbn-rpm-validator --help  # [linux]
+    - lbn-test --help  # [linux]
+    - lbn-test-legacy --help  # [linux]
+    - lbn-test-poll --help  # [linux]
+    - lbp-check-periodic-tests --help  # [linux]
+    - lbp-check-periodic-tests-msg --help  # [linux]
+    - lbpr-get-command --help  # [linux]
+    - lbq-builddone --help  # [linux]
+    - lbq-buildnotif --help  # [linux]
+    # - lbq-getteststorun --help  # [linux]
+    - lbq-requesttest --help  # [linux]
   requires:
     - pip
 
