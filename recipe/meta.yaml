@@ -51,7 +51,7 @@ build:
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -77,6 +77,7 @@ requirements:
     - pyyaml
     - decorator
     - future
+    - lbmessaging
 
 test:
   imports:
@@ -125,7 +126,7 @@ test:
     - lbpr-get-command --help  # [linux]
     - lbq-builddone --help  # [linux]
     - lbq-buildnotif --help  # [linux]
-    # - lbq-getteststorun --help  # [linux]
+    - lbq-getteststorun --help  # [linux]
     - lbq-requesttest --help  # [linux]
   requires:
     - pip
