@@ -1,5 +1,5 @@
 {% set name = "lbnightlytools" %}
-{% set version = "4.0.0" %}
+{% set version = "4.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbNightlyTools-{{ version }}.tar.gz
-  sha256: 51d4be08768a41ca7b63e80b9b3b78dbd986bc2dda31adb686ce3754ab706922
+  sha256: a48ec3ff91317cafaa74b302ce0390616e2bf5091915f149b1bc662f885e09a9
 
 build:
   entry_points:
@@ -51,7 +51,7 @@ build:
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
