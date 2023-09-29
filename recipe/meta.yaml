@@ -29,6 +29,7 @@ build:
     - lbn-generate-metaspec=LbNightlyTools.Scripts._entry_points:generate_metaspec
     - lbn-generate-spec=LbNightlyTools.Scripts._entry_points:generate_spec
     - lbn-gen-release-config=LbNightlyTools.Scripts._entry_points:gen_release_config
+    - lbn-get-configs=LbNightlyTools.Scripts._entry_points:get_configs
     - lbn-get-new-refs=LbNightlyTools.GetNightlyRefs:main
     - lbn-gitlab-mr=LbNightlyTools.Scripts.GitlabMR:main
     - lbn-index=LbNightlyTools.Scripts._entry_points:index
@@ -43,29 +44,33 @@ build:
     - lbn-test=LbNightlyTools.Scripts.Test:run
     - lbn-test-legacy=LbNightlyTools.Scripts.Test:run
     - lbn-test-poll=LbNightlyTools.Scripts._entry_points:test_poll
+    - lbn-wrapcmd=LbNightlyTools.Scripts.wrapcmd:main
     - lbp-check-periodic-tests=LbPeriodicTools._entry_points:check_periodic_tests
     - lbp-check-periodic-tests-msg=LbPeriodicTools._entry_points:check_periodic_tests_msg
+    - lbpr-collect=LbPR._entry_points:collect
     - lbpr-get-command=LbPR._entry_points:get_command
     - lbq-builddone=LbNightlyTools.Scripts._entry_points:lbq_builddone
     - lbq-buildnotif=LbNightlyTools.Scripts._entry_points:lbq_buildnotif
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
+  noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - setuptools >=42,<58
     - wheel
     - setuptools-scm >=3.4
     - pip
   run:
-    - python
+    - python >=3.6
     - lbenv
     - lbcommon >=0.0.7
     - lbdevtools
     - lbinstall
+    - lbmessaging
     - python-gitlab
     - pika ==1.1.0
     - python-couchdb
@@ -77,7 +82,6 @@ requirements:
     - pyyaml
     - decorator
     - future
-    - lbmessaging
 
 test:
   imports:
@@ -107,6 +111,7 @@ test:
     - lbn-generate-metaspec --help  # [linux]
     - lbn-generate-spec --help  # [linux]
     - lbn-gen-release-config --help  # [linux]
+    # - lbn-get-configs -- help  # [linux]
     - lbn-get-new-refs --help  # [linux]
     - lbn-gitlab-mr --help  # [linux]
     - lbn-index --help  # [linux]
@@ -121,8 +126,10 @@ test:
     - lbn-test --help  # [linux]
     - lbn-test-legacy --help  # [linux]
     - lbn-test-poll --help  # [linux]
+    # - lbn-wrapcmd --help  # [linux]
     - lbp-check-periodic-tests --help  # [linux]
     - lbp-check-periodic-tests-msg --help  # [linux]
+    # - lbpr-collect  --help  # [linux]
     - lbpr-get-command --help  # [linux]
     - lbq-builddone --help  # [linux]
     - lbq-buildnotif --help  # [linux]
