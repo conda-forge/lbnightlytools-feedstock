@@ -55,7 +55,7 @@ build:
     - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
