@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/lbnightlytools-
 
 Home: https://gitlab.cern.ch/lhcb-core/LbNightlyTools
 
-Package license: GPL-3.0
+Package license: GPL-3.0-or-later
 
 Summary: LHCb Nightly tools
 
@@ -143,5 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@bcouturi](https://github.com/bcouturi/)
 * [@chrisburr](https://github.com/chrisburr/)
 
