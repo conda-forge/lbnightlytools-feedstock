@@ -146,5 +146,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - pikacic
     - bcouturi
     - chrisburr
