@@ -147,6 +147,3 @@ Feedstock Maintainers
 * [@chrisburr](https://github.com/chrisburr/)
 * [@pikacic](https://github.com/pikacic/)
 
-
-<!-- dummy commit to enable rerendering -->
-
