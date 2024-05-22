@@ -52,7 +52,6 @@ build:
     - lbq-builddone=LbNightlyTools.Scripts._entry_points:lbq_builddone
     - lbq-buildnotif=LbNightlyTools.Scripts._entry_points:lbq_buildnotif
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
-    - lbq-requesttest=LbNightlyTools.Scripts._entry_points:lbq_requesttest
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
@@ -134,7 +133,6 @@ test:
     - lbq-builddone --help  # [linux]
     - lbq-buildnotif --help  # [linux]
     - lbq-getteststorun --help  # [linux]
-    - lbq-requesttest --help  # [linux]
   requires:
     - pip
 
