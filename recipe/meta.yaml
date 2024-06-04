@@ -69,9 +69,7 @@ requirements:
     - lbcommon >=0.0.7
     - lbdevtools
     - lbinstall
-    - lbmessaging
     - python-gitlab
-    - pika ==1.1.0
     - python-couchdb
     - tabulate
     - joblib
@@ -84,7 +82,6 @@ requirements:
 
 test:
   imports:
-    - LbMsg
     - LbNightlyTools
     - LbPR
     - LbPeriodicTools
@@ -130,8 +127,8 @@ test:
     - lbp-check-periodic-tests-msg --help  # [linux]
     # - lbpr-collect  --help  # [linux]
     - lbpr-get-command --help  # [linux]
-    - lbq-builddone --help  # [linux]
-    - lbq-buildnotif --help  # [linux]
+    # - lbq-builddone --help  # [linux]
+    # - lbq-buildnotif --help  # [linux]
     - lbq-getteststorun --help  # [linux]
   requires:
     - pip
