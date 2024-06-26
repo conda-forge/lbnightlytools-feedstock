@@ -1,5 +1,5 @@
 {% set name = "lbnightlytools" %}
-{% set version = "4.0.11" %}
+{% set version = "4.0.12" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/LbNightlyTools-{{ version }}.tar.gz
-  sha256: 6864c913ee39da46011ee288663fa3bae3655aad1dd41261a39e88a12c4142dd
+  sha256: 46c47cb765e0aa7107433607ef703059f9952613ac80323f7dabd0a60c89c4ae
 
 build:
   entry_points:
