@@ -1,13 +1,13 @@
 {% set name = "lbnightlytools" %}
-{% set version = "4.0.13" %}
+{% set version = "4.0.15" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/LbNightlyTools-{{ version }}.tar.gz
-  sha256: 2fd0ee9ef60080c346a27458285cc1ffe78b97f492f698ee70aa692a7a6d5748
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 600677e9038a74663a8e5501a7d696266fe8b73edf8cb481367c081f73beb434
 
 build:
   entry_points:
@@ -54,14 +54,13 @@ build:
     - lbq-getteststorun=LbNightlyTools.Scripts._entry_points:lbq_getteststorun
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - setuptools >=42,<58
-    - wheel
-    - setuptools-scm >=3.4
+    - setuptools
+    - setuptools-scm
     - pip
   run:
     - python >={{ python_min }}
@@ -75,7 +74,6 @@ requirements:
     - joblib
     - gitpython
     - networkx
-    - gitdb2
     - pyyaml
     - decorator
     - future
