@@ -144,7 +144,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@bcouturi](https://github.com/bcouturi/)
-* [@chrisburr](https://github.com/chrisburr/)
-* [@pikacic](https://github.com/pikacic/)
+* [@LbEnv](https://github.com/LbEnv/)
 
