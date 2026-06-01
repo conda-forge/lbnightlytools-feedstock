@@ -144,5 +144,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@LbEnv](https://github.com/LbEnv/)
+* [@conda-forge/LbEnv](https://github.com/orgs/conda-forge/teams/LbEnv/)
 

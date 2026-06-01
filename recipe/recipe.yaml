@@ -141,4 +141,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - LbEnv
+    - conda-forge/LbEnv
