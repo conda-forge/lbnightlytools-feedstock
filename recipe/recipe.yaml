@@ -3,6 +3,7 @@ schema_version: 1
 context:
   name: lbnightlytools
   version: "4.0.22"
+  python_min: 3.12
 
 package:
   name: ${{ name|lower }}
