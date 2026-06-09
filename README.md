@@ -146,6 +146,3 @@ Feedstock Maintainers
 
 * [@conda-forge/LbEnv](https://github.com/orgs/conda-forge/teams/LbEnv/)
 
-
-<!-- dummy commit to enable rerendering -->
-
