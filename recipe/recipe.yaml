@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: lbnightlytools
-  version: "4.0.26"
+  version: "4.0.27"
   python_min: "3.12"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
-  sha256: 60284a248d4ebd16088b646c6672b9ca618ad9818eaab1162f0aed4004cfdc89
+  sha256: f3b44dbc814ec3dd00f31db51f2ff96262ed306b277e323bf39f911d2a0a2eec
 
 build:
   number: 0
